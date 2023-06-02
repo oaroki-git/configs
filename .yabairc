@@ -1,20 +1,22 @@
+yabai -c "~/.yabairc"
+
 yabai -m config layout bsp
 yabai -m config window_placement second_child
 yabai -m config auto_balance off
 
 yabai -m config window_topmost on
-yabai -m config window_shadow float
+yabai -m config window_shadow off
+yabai -m config window_gap 5
+yabai -m config top_padding 5   
+yabai -m config bottom_padding 5
+yabai -m config left_padding   5
+yabai -m config right_padding  5
 
 yabai -m config mouse_modifier alt
 yabai -m config mouse_action1 resize
 
-yabai -m rule --add app="^System Settings$" manage=off
-yabai -m rule --add app="^Shottr$" manage=off
-yabai -m rule --add app="^AltTab$" manage=off
-yabai -m rule --add app="^Wireless Diagnostics$" manage=off
-yabai -m rule --add app="^Numi$" manage=off
-yabai -m rule --add app="^System Information$" manage=off
-yabai -m rule --add title="^copy$" manage=off
-yabai -m rule --add title="^Picture in Picture$" manage=off
-yabai -m rule --add app="^Raycast$" manage=off
+yabai -m rule --add app!="^(Safari|Microsoft Edge|Finder|Microsoft Excel|Microsoft PowerPoint|Microsoft Word|Freeform|Arc|Preview|iTerm2|VSCodium|Arc)$" manage=off
 
+yabai -m rule --add title="^Picture in Picture$" manage=off
+
+echo "yabai configs loaded!"
