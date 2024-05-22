@@ -1,0 +1,17 @@
+import = ["~/.config/alacritty/themes/themes/thelovelace.toml"]
+shell = "/bin/zsh"
+
+[window]
+padding = {x = 2, y = 2}
+dynamic_padding = true
+decorations = "none"
+opacity = 0.9
+blur = true
+dynamic_title = true
+
+[font]
+size = 15
+normal = {family = "Iosevka Nerd Font Mono", style = "Regular"}
+bold = {family = "Iosevka Nerd Font Mono", style = "Regular"}
+italic = {family = "Iosevka Nerd Font Mono", style = "Regular"}
+bold_italic = {family = "Iosevka Nerd Font Mono", style = "Regular"}
