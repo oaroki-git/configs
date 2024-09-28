@@ -1,0 +1,31 @@
+yabai -m config layout bsp
+# yabai -m config window_placement second_child
+yabai -m config auto_balance off
+yabai -m config window_shadow float
+#yabai -m config window_animation_duration 0.3
+#yabai -m config window_animation_easing ease_in_out_expo
+
+yabai -m config top_padding    3
+yabai -m config bottom_padding 3
+yabai -m config left_padding   3
+yabai -m config right_padding  3
+yabai -m config window_gap     3
+
+# yabai -m config external_bar all:26:0
+
+yabai -m rule --add app=".*" manage=off
+yabai -m rule --add app="Safari" manage=on
+yabai -m rule --add app="^Tor Browser$" manage=on
+yabai -m rule --add app="^Alacritty$" manage=on
+yabai -m rule --add app="^kitty$" manage=on
+yabai -m rule --add app="^LibreOffice$" manage=on
+yabai -m rule --add app="^App Store$" manage=on
+yabai -m rule --add app="^Keynote$" manage=on
+yabai -m rule --add app="^Firefox$" manage=on
+yabai -m rule --add app="^访达$" manage=on
+yabai -m rule --add app="^Xcode$" manage=on
+yabai -m rule --add app="^预览$" manage=on
+yabai -m rule --add app="^Finder$" manage=on
+yabai -m rule --add app="^Preview$" manage=on
+yabai -m rule --add app="^Obsidian$" manage=on
+

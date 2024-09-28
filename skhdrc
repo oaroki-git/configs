@@ -1,0 +1,83 @@
+# open apps
+cmd - return : open -n -a "Alacritty"
+cmd - 0x27 : open -a "Safari"
+cmd - 0x2A : open -a "NetEaseMusic"
+cmd - 0x2C : open -a "WeChat"
+
+#"task manager"
+shift + ctrl - 0x35: open -a "Activity Monitor"
+
+# moves focus between windows in the current focused display
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# toggle window split type
+alt - e : yabai -m window --toggle split
+
+# rotate tree
+alt - r : yabai -m space --rotate 90
+
+# mirror tree y-axis
+alt - y : yabai -m space --mirror y-axis
+
+# toggle window parent zoom
+alt - d : yabai -m window --focus mouse && \
+          yabai -m window --toggle zoom-parent
+
+# float / unfloat window and center on screen
+alt - t : yabai -m window --toggle float;\
+          yabai -m window --grid 7:8:2:1:4:5
+
+# center window, ignore error
+alt - c : yabai -m window --grid 7:8:2:1:4:5
+
+# toggle window fullscreen zoom
+alt - f : yabai -m window --focus mouse && \
+          yabai -m window --toggle zoom-fullscreen
+
+# balance size of windows
+shift + alt - e : yabai -m space --balance
+
+# swap window
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
+# move window
+shift + cmd - h : yabai -m window --warp west
+shift + cmd - j : yabai -m window --warp south
+shift + cmd - k : yabai -m window --warp north
+shift + cmd - l : yabai -m window --warp east
+
+# send window to a space 
+shift + alt - 1 : yabai -m window --space 1
+shift + alt - 2 : yabai -m window --space 2
+shift + alt - 3 : yabai -m window --space 3
+shift + alt - 4 : yabai -m window --space 4
+shift + alt - 5 : yabai -m window --space 5
+shift + alt - 6 : yabai -m window --space 6
+shift + alt - 7 : yabai -m window --space 7
+shift + alt - 8 : yabai -m window --space 8
+shift + alt - 9 : yabai -m window --space 9
+
+# change layout of desktop
+ctrl + alt - a : yabai -m space --layout bsp
+ctrl + alt - d : yabai -m space --layout float
+
+# increase window size
+ctrl + alt - h : yabai -m window --resize left:-40:0
+ctrl + alt - j : yabai -m window --resize bottom:0:40
+ctrl + alt - k : yabai -m window --resize top:0:-40
+ctrl + alt - l : yabai -m window --resize right:40:0
+
+# decrease window size
+ctrl + alt + cmd - h : yabai -m window --resize left:40:0
+ctrl + alt + cmd - j : yabai -m window --resize bottom:0:-40
+ctrl + alt + cmd - k : yabai -m window --resize top:0:40
+ctrl + alt + cmd - l : yabai -m window --resize right:-40:0
+
+# restart yabai
+ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
