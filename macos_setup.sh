@@ -471,7 +471,9 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 # Things here will turn off some core features of MacOS!! be really careful!!!#
 ###############################################################################
 
-# especially here
+## thankfully apple's naming conventions are pretty straightforward, the name tells you more or less what it does ##
+
+# these are especially noticable! i actually recommend commenting out these
 launchctl unload  -w /System/Library/LaunchAgents/com.apple.findmy.findmylocateagent.plist 2> /dev/null
 launchctl unload  -w /System/Library/LaunchAgents/com.apple.iCloudNotificationAgent.plist 2> /dev/null
 launchctl unload  -w /System/Library/LaunchAgents/com.apple.itunescloudd.plist 2> /dev/null
@@ -484,7 +486,7 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.spotlightknowledged.u
 launchctl unload -w /System/Library/LaunchAgents/com.apple.corespotlightd 2> /dev/null
 launchctl unload -w /System/Library/LaunchAgents/com.apple.Spotlight 2> /dev/null
 
-# these ones are less radical
+# these ones are less radical, they turn off a lot of stuff that works in the background. Still, only run this section if you really want it to be bare-bones!
 launchctl unload -w /System/Library/LaunchAgents/com.apple.diagnostics_agent.plist 
 launchctl unload -w /System/Library/LaunchAgents/com.apple.diagnosticextensionsd.plist 
 launchctl unload -w /System/Library/LaunchAgents/com.apple.symptomsd-diag.plist
