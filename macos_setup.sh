@@ -468,7 +468,7 @@ defaults write com.apple.DiskUtility advanced-image-options -bool true
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 ###############################################################################
-# Insane Shit                                                                 #
+# Things here will turn off some core features of MacOS!! be really careful   #
 ###############################################################################
 
 launchctl unload  -w /System/Library/LaunchAgents/com.apple.findmy.findmylocateagent.plist 2> /dev/null
