@@ -472,6 +472,7 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 ###############################################################################
 
 ## thankfully apple's naming conventions are pretty straightforward, the name tells you more or less what it does ##
+## turning off many of these may cause slower time to return to nomal function after reboot ##
 
 # these are especially noticable! i actually recommend commenting out these
 launchctl unload  -w /System/Library/LaunchAgents/com.apple.findmy.findmylocateagent.plist 2> /dev/null
