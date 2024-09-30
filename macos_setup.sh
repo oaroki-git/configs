@@ -474,7 +474,7 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 ## thankfully apple's naming conventions are pretty straightforward, the name tells you more or less what it does ##
 ## turning off many of these may cause slower time to return to nomal function after reboot ##
 
-# these are especially noticable! i actually recommend commenting out these
+# these are the ones i added on top, they are much more intrusive, as you can see in the names of the agents lol
 launchctl unload  -w /System/Library/LaunchAgents/com.apple.findmy.findmylocateagent.plist 2> /dev/null
 launchctl unload  -w /System/Library/LaunchAgents/com.apple.iCloudNotificationAgent.plist 2> /dev/null
 launchctl unload  -w /System/Library/LaunchAgents/com.apple.itunescloudd.plist 2> /dev/null
@@ -487,7 +487,7 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.spotlightknowledged.u
 launchctl unload -w /System/Library/LaunchAgents/com.apple.corespotlightd 2> /dev/null
 launchctl unload -w /System/Library/LaunchAgents/com.apple.Spotlight 2> /dev/null
 
-# these ones are less radical, they turn off a lot of stuff that works in the background. Still, only run this section if you really want it to be bare-bones!
+# these ones are from wyvern's optimizations, the most affecting changes are mostly some icloud stuff, siri and findmy
 launchctl unload -w /System/Library/LaunchAgents/com.apple.diagnostics_agent.plist 2> /dev/null
 launchctl unload -w /System/Library/LaunchAgents/com.apple.diagnosticextensionsd.plist 2> /dev/null
 launchctl unload -w /System/Library/LaunchAgents/com.apple.symptomsd-diag.plist 2> /dev/null
