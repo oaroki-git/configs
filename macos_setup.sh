@@ -487,6 +487,10 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.spotlightknowledged.u
 launchctl unload -w /System/Library/LaunchAgents/com.apple.corespotlightd 2> /dev/null
 launchctl unload -w /System/Library/LaunchAgents/com.apple.Spotlight 2> /dev/null
 
+launchctl unload -w /System/Library/LaunchAgents/com.apple.geoanalyticsd.plist 2> /dev/null
+launchctl unload -w /System/Library/LaunchAgents/com.apple.universalaccessd.plist 2> /dev/null
+launchctl unload -w /System/Library/LaunchAgents/com.apple.universalaccesscontrol.plist 2> /dev/null
+
 # these ones are from wyvern's optimizations, the most affecting changes are mostly some icloud stuff, siri and findmy
 launchctl unload -w /System/Library/LaunchAgents/com.apple.diagnostics_agent.plist 2> /dev/null
 launchctl unload -w /System/Library/LaunchAgents/com.apple.diagnosticextensionsd.plist 2> /dev/null
