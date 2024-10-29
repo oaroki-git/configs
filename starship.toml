@@ -3,8 +3,10 @@
 add_newline = true
 
 format = """
-[@](bright-red) $directory$character"""
+$directory
+$character
+"""
 
 [character]
-success_symbol = "[>> ](bright-green)"
-error_symbol = "[>> ](bright-red)"
+success_symbol = '[➜](bold green)'
+error_symbol = '[×](bold red)'
