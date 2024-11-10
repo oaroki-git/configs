@@ -1,17 +1,17 @@
-import = ["~/.config/alacritty/themes/themes/thelovelace.toml"]
-shell = "/bin/zsh"
+[general]
+import = ["/home/rae/.config/alacritty/themes/thelovelace.toml"]
+
+[terminal]
+shell = "/home/rae/.cargo/bin/nu"
 
 [window]
-padding = {x = 2, y = 2}
-dynamic_padding = true
-decorations = "none"
-opacity = 0.9
-blur = true
-dynamic_title = true
+opacity = 0.8
+blur = false
+padding = { x = 15, y = 15 }
 
 [font]
-size = 15
-normal = {family = "Iosevka Nerd Font Mono", style = "Regular"}
-bold = {family = "Iosevka Nerd Font Mono", style = "Regular"}
-italic = {family = "Iosevka Nerd Font Mono", style = "Regular"}
-bold_italic = {family = "Iosevka Nerd Font Mono", style = "Regular"}
+size = 11
+normal = {family = "CommitMonoNerdFont Mono", style = "Regular"}
+bold = {family = "CommitMonoNerdFont Mono", style = "Bold"}
+italic = {family = "CommitMonoNerdFont Mono", style = "Italic"}
+bold_italic = {family = "CommitMonoNerdFont Mono", style = "Bold Italic"}
