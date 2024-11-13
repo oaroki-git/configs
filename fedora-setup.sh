@@ -1,8 +1,7 @@
 #!/bin/bash
 echo moving configs and installing software from dnf.. \(destructive\)
 sudo dnf install git hyprland hyprpaper hyprlock alacritty dolphin neovim waybar openssl openssl-devel
-git clone https://github.com/oaroki-git/configs.git
-cd configs
+cd ~/configs
 mv hypr ~/.config
 mv alacritty ~/.config
 mv waybar ~/.config
